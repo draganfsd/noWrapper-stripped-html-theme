@@ -1,0 +1,9 @@
+
+html temp
+
+{% set conBody %}
+{{ page }}
+{% endset %}
+
+{# {{ conBody }} #}
+{{ conBody|striptags('</body>')|raw }}

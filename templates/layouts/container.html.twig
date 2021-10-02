@@ -1,0 +1,6 @@
+container
+{% set conBody %}
+{{ children }}
+{% endset %}
+
+{{ conBody|striptags|raw }}

@@ -1,0 +1,6 @@
+page content
+{% set conBody %}
+{{ page.content }}
+{% endset %}
+
+{{ conBody|striptags|raw }}

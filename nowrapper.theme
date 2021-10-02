@@ -1,0 +1,18 @@
+<?php
+function nowrapper_preprocess_block__system_messages_block(&$variables)
+{
+    $variables['content']['#include_fallback'] = FALSE;
+}
+function nowrapper_preprocess_html(&$variables)
+{
+    $variables["html"]["page"]["content"]["messages"]["#include_fallback"] = false;
+}
+
+
+// added render to decode html entities 
+function nowrapper_render($values)
+{
+    $value = html_entity_decode($this->get_value($values));
+    return $this->render_link($this->sanitize_value($value), $values);
+}
+  // added render to decode html entities 

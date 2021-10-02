@@ -1,0 +1,6 @@
+region
+{% set conBody %}
+{{ content }}
+{% endset %}
+
+{{ conBody|striptags|raw }}
